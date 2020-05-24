@@ -2,7 +2,7 @@
 
 short code examples saving some python tricks for quick reference 
 
-##Contents covered:
+#Contents covered:
 
  context-manager
 
