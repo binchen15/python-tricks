@@ -1,8 +1,14 @@
 # python-tricks
-simple files showing some python tricks
 
-context-manager
+short code examples saving some python tricks for quick reference 
 
-generator expressions
+Contents covered:
 
-generator functions
+ context-manager
+
+ generator expressions/functions
+ 
+ itertools functions
+ 
+ collections
+
