@@ -1,0 +1,14 @@
+# ref https://realpython.com/intro-to-python-threading/#producer-consumer-threading
+
+content:
+	single thread
+		non-daemon
+		daemon (need join)
+	multiple thread
+	ThreadPoolExecutor context manager
+	race conditions
+	producer-consumer queue
+
+not provided
+	threading.Timer
+	threading.Barrier
