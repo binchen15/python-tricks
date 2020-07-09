@@ -17,7 +17,10 @@ def listdir(dir_name):  # dir_name absolute/relative path
     except OSError:
         return "no such file or directory!"
 
-server.register_function(listdir)
+# the client must access via "dir()" instead of "listdir()"
+# server.register_function(listdir, 'dir')
+# namespace  is allowed
+server.register_function(listdir, 'dir.list')
 
 try:
     server.serve_forever()
