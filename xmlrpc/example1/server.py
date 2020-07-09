@@ -1,0 +1,25 @@
+# simple xmlrpc server. serving content of a directory
+from xmlrpc.server import SimpleXMLRPCServer
+import logging
+import os
+
+logging.basicConfig(level=logging.INFO)
+
+server = SimpleXMLRPCServer(
+    ('localhost', 5678),
+    logRequests=True,
+)
+
+def listdir(dir_name):  # dir_name absolute/relative path
+    logging.info("list content of dir: {}".format(dir_name))
+    try:
+        return os.listdir(dir_name)
+    except OSError:
+        return "no such file or directory!"
+
+server.register_function(listdir)
+
+try:
+    server.serve_forever()
+except KeyboardInterrupt:
+    print("exit...")
