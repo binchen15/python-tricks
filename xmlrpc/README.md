@@ -20,7 +20,7 @@
 
 ### multicall wrapper extension
 
-`
+```
 import xmlrpc.client
 server = xmlrpc.client.ServerProxy('http://localhost:9000')
 
@@ -35,5 +35,5 @@ try:
         print(i, r)
 except xmlrpc.client.Fault as err:
     print('ERROR:', err)
-`
+````
 
