@@ -32,4 +32,21 @@ service information
 
 TCP/IP Client and Server
 
+	stream oriented protocol
+
+User Datagram Client and server
+	
+	message oriented protocol
+
+	UDP messages must fit within a single datagram (for IPv4, 
+	that means they can only hold 65,507 bytes because the 65,535 byte 
+	packet also includes header information) and delivery is not 
+	guaranteed as it is with TCP.
+
+Unix Domain Socket
+
+	the address of the socket is a path on the file system
+	the node created in the file system to represent the socket persists 
+	 after the socket is closed, and needs to be removed each time the server starts up
+
 
