@@ -1,3 +1,7 @@
 *.so
 *.o
 __pycache__/
+
+# pybind11
+*.cppimporthash 
+.rendered.*.cpp
