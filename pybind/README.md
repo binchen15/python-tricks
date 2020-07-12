@@ -20,6 +20,11 @@ PYBIND11_MODULE(example, m) {
 ```
 ----------------------------------------
 
+#### exporting variables from C++
+
+	py::object world = py::cast("World");
+	m.attr("what") = world;
+
 ### build manually on linux
 
 	c++ -O3 -Wall -shared -std=c++11 -fPIC `python3 -m pybind11 --includes` example.cpp -o example`python3-config --extension-suffix`
